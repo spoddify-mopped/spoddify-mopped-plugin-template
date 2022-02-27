@@ -1,0 +1,27 @@
+const prettierConfig = require('./.prettierrc.js');
+
+module.exports = {
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'plugin:import/typescript',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  rules: {
+    '@typescript-eslint/no-unused-vars': 'error',
+    camelcase: 'warn',
+    eqeqeq: 'error',
+    'no-duplicate-imports': 'error',
+    'no-unused-expressions': 'error',
+    'no-unused-labels': 'error',
+    'prefer-const': 'error',
+    'prefer-template': 'error',
+    'prettier/prettier': ['error', prettierConfig],
+    'sort-imports': 'error',
+    'sort-keys': 'error',
+  },
+};
